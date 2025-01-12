@@ -2,9 +2,9 @@
 
 ## Git Setup Tasks
 1. Initialize git repository
-   - [ ] Run `git init`
+   - [x] Run `git init`
+   - [ ] Stage files with `git add .`
    - [ ] Make initial commit
-   - [ ] Set up main branch
    - [ ] Push to GitHub
 
 ## Next Steps
