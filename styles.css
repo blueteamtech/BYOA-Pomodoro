@@ -81,16 +81,22 @@ h1 {
     transition: all 0.3s ease;
     background: #f8f9fa;
     color: #2d3436;
+    min-width: 100px;
 }
 
-#start {
+#start-pause.start {
     background: #00b894;
     color: white;
 }
 
-#pause {
+#start-pause.pause {
     background: #fdcb6e;
     color: #2d3436;
+}
+
+#add-five {
+    background: #74b9ff;
+    color: white;
 }
 
 #reset {
