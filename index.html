@@ -8,21 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Pomodoro Timer</h1>
-        <div class="controls">
-            <button id="start">Start</button>
-            <button id="pause">Pause</button>
-            <button id="reset">Reset</button>
-        </div>
-        <div class="mode-controls">
-            <button id="work-mode" class="active">Work (25m)</button>
-            <button id="rest-mode">Rest (5m)</button>
+        <div class="header">
+            <h1>Pomodoro Timer</h1>
+            <button id="mode-toggle" class="mode-toggle">☀️</button>
         </div>
         <div class="timer">
             <span id="minutes">25</span>:<span id="seconds">00</span>
         </div>
-        <div class="mode">
-            <p id="mode-text">Work Time</p>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
         </div>
         <div class="current-time" id="current-time"></div>
     </div>
