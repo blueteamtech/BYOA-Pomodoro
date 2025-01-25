@@ -21,6 +21,8 @@ function updateDisplay() {
     const seconds = timeLeft % 60;
     minutesDisplay.textContent = minutes.toString().padStart(2, '0');
     secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+    // Update the page title
+    document.title = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} - Pomodoro Timer`;
 }
 
 function startTimer() {
@@ -68,9 +70,27 @@ function setRestMode() {
     resetTimer();
 }
 
+function updateCurrentTime() {
+    const currentTime = new Date().toLocaleTimeString();
+    document.getElementById('current-time').textContent = currentTime;
+}
+
+// Update time every second
+setInterval(updateCurrentTime, 1000);
+updateCurrentTime(); // Initial call
+
 // Event Listeners
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer);
 workModeButton.addEventListener('click', setWorkMode);
-restModeButton.addEventListener('click', setRestMode); 
+restModeButton.addEventListener('click', setRestMode);
+
+function updateTimer(minutes, seconds) {
+    // Format the time with leading zeros if needed
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(seconds).padStart(2, '0');
+    
+    // Update the page title with the current time
+    document.title = `${formattedMinutes}:${formattedSeconds} - Pomodoro Timer`;
+} 
